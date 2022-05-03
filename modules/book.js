@@ -24,11 +24,11 @@ export default class AwesomeBooks {
   }
 
   #save() {
-    localStorage.setItem("books", JSON.stringify(this.books));
+    localStorage.setItem('books', JSON.stringify(this.books));
   }
 
   load() {
-    const books = JSON.parse(localStorage.getItem("books"));
+    const books = JSON.parse(localStorage.getItem('books'));
     if (books) {
       this.#addBooks(books);
     }
