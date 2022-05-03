@@ -1,4 +1,5 @@
-import { AwesomeBooks } from './modules/book.js';
+import AwesomeBooks from './modules/book.js';
+import luxon from './modules/luxon.js';
 
 const awesomeBooks = new AwesomeBooks();
 awesomeBooks.load();
@@ -9,7 +10,8 @@ if (awesomeBooks.getBooks().length < 1) {
 const bookListSection = document.querySelector('#book-list');
 
 function renderBookList() {
-  bookListSection.innerHTML = AwesomeBooks.getBooks()
+  bookListSection.innerHTML = awesomeBooks
+    .getBooks()
     .map(
       (book, index) => `
         <article class="book ${index % 2 === 0 ? 'dark' : ''}">
@@ -42,14 +44,10 @@ bookListSection.addEventListener('click', (event) => {
 });
 
 const dateSection = document.querySelector('.date');
-const dateOptions = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  time: 'numeric',
-};
-dateSection.innerHTML = new Date().toLocaleDateString('en-US', dateOptions);
+const dateTime = luxon.DateTime.now().toLocaleString(
+  luxon.DateTime.DATETIME_FULL,
+);
+dateSection.innerHTML = dateTime;
 
 const bookList = document.querySelector('.list-link');
 const addNew = document.querySelector('.add-new');
