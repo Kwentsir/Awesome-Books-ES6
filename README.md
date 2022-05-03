@@ -4,11 +4,14 @@
 
 ## About Awesome Books
 
-Awesome books is a website that allows users to add/remove books from a list. This has been implemented with JavaScript objects and arrays.
+Awesome books is a website that allows users to add/remove books from a list. This has been implemented with modules and ES6 syntax.
 
 ## Built With
 
-- html, css and javascript
+- HTML 
+- CSS 
+- JavaScript
+- Luxon Library
 
 ### Install
 
@@ -25,7 +28,6 @@ Awesome books is a website that allows users to add/remove books from a list. Th
 
 - node.js
 - npm
-- luxon
 
 ## Author
 
