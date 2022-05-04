@@ -31,7 +31,7 @@ addBookForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = event.target.querySelector('#title').value;
   const author = event.target.querySelector('#author').value;
-  AwesomeBooks.addBook(title, author);
+  awesomeBooks.addBook(title, author);
   event.target.reset();
   renderBookList();
 });
@@ -39,7 +39,7 @@ addBookForm.addEventListener('submit', (event) => {
 bookListSection.addEventListener('click', (event) => {
   if (event.target.classList.contains('remove')) {
     const { id } = event.target.dataset;
-    AwesomeBooks.deleteBook(+id);
+    awesomeBooks.deleteBook(+id);
     renderBookList();
   }
 });
