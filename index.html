@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>All Awesome Books</title>
+  </head>
+  <body>
+    <nav class="nav-container">
+      <div class="logo">Awesome Books</div>
+      <div class="nav-link">
+        <ul class="nav-ul">
+          <li class="list-link"><a href="#list">List</a></li>
+          <li class="add-new"><a href="#add-book">Add new</a></li>
+          <li class="contact"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="date"></section>
+
+    <section class="books-list">
+      <div id="list" class="list">
+        <h1>All Awesome Books</h1>
+        <div id="book-list" class="books"></div>
+        <hr />
+      </div>
+    </section>
+
+    <section class="form">
+      <h2>Add a new Book</h2>
+      <form id="add-book">
+        <input id="title" type="text" placeholder="Title" />
+        <input id="author" type="text" placeholder="Author" />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section id="contact" class="contact-container">
+      <h2 class="contact-headline">Contact Information</h2>
+      <p class="contact-paragraph">
+        Do you have any questions or you just want to say "Hello"?<br />You can
+        reach out to us!
+      </p>
+      <ul class="contact-list">
+        <li>Our e-mail: kwentsirkwesi@gmail.com</li>
+        <li>Our Phone number: +233548383383</li>
+        <li>Address: streetname 22, zip-code, city, country.</li>
+      </ul>
+    </section>
+
+    <footer id="footer" class="footer-container">
+      <div class="copyright">
+        <div class="logo">Awesome-Books</div>
+        <div class="text">2022, Awesome books all rights reserved.</div>
+      </div>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
