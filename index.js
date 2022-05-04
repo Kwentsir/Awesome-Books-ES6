@@ -1,5 +1,6 @@
-import AwesomeBooks from './modules/book.js';
 import luxon from './modules/luxon.js';
+
+import AwesomeBooks from './modules/book.js';
 
 const awesomeBooks = new AwesomeBooks();
 awesomeBooks.load();
@@ -26,12 +27,12 @@ function renderBookList() {
 renderBookList();
 
 const addBookForm = document.querySelector('#add-book');
-addBookForm.addEventListener('submit', function (event) {
+addBookForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = event.target.querySelector('#title').value;
   const author = event.target.querySelector('#author').value;
   AwesomeBooks.addBook(title, author);
-  this.reset();
+  event.target.reset();
   renderBookList();
 });
 
