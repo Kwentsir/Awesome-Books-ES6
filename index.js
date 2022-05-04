@@ -10,7 +10,7 @@ if (awesomeBooks.getBooks().length < 1) {
 
 const bookListSection = document.querySelector('#book-list');
 
-function renderBookList() {
+const renderBookList = () => {
   bookListSection.innerHTML = awesomeBooks
     .getBooks()
     .map(
